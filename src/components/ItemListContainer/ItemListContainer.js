@@ -1,17 +1,34 @@
 import React from 'react'
+import { Card, Image } from 'semantic-ui-react'
+import ItemCount from '../ItemCount/ItemCount'
 
 // let item = {nombre : "Hamburguesa", plato:"congelado", stock:2}
 
-function ItemListContainer({nombre, plato, stock}) {
+function ItemListContainer({nombre, plato, stock, img}) {
+
+
     
     return (
         <div className="Container">
 
-                <h2> Producto: {nombre} </h2>
-                <h2> Tipo de plato: {plato} </h2>
-                <h2> Sotck en tienda: {stock} </h2>
-            
-            
+
+            <Card>
+                <Card.Content>
+                <Card.Header>{nombre}</Card.Header>
+                <Image src={img} wrapped ui={false} width='250px' />
+                <Card.Meta>
+                    <span className='date'>{plato}</span>
+                </Card.Meta>
+                <Card.Description>
+                    {stock}
+                </Card.Description>
+                <ItemCount 
+                    stock = {stock}
+                    initial = {0}
+                />
+
+                </Card.Content>
+            </Card>            
         </div>
     )
 }

@@ -18,9 +18,10 @@ function App() {
       
       <div className="ItemListContainer" >
       <ItemListContainer 
+        img ='https://s1.eestatic.com/2020/02/10/cocinillas/recetas/vegetarianas/recetas_veganas-hamburguesas-vegetarianas_466466296_144843568_1706x960.jpg'
         nombre = 'Hamburguesa'
         plato = 'Congelado'
-        stock = '2'
+        stock = '5'
       />
       </div>
 
