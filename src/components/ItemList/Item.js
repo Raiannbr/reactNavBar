@@ -1,26 +1,16 @@
 import React from 'react'
-// import { Card, Image } from 'semantic-ui-react'
-// import ItemCount from '../ItemCount/ItemCount'
 
-import ItemList from '../ItemList/ItemList'
+import { Card, Image } from 'semantic-ui-react'
 
-// let item = {nombre : "Hamburguesa", plato:"congelado", stock:2}
-
-function ItemListContainer(
-    // {nombre, plato, stock, img}
-    ) {
+//componente contador
+import ItemCount from '../ItemCount/ItemCount'
 
 
-    
+
+function Item({nombre, img, plato, stock, id}) {
     return (
-        <div className="Container">
-
-            <ItemList
-                
-            />
-
-
-            {/* <Card>
+        <div >
+            <Card>
                 <Card.Content>
                 <Card.Header>{nombre}</Card.Header>
                 <Image src={img} wrapped ui={false} width='250px' />
@@ -28,17 +18,17 @@ function ItemListContainer(
                     <span className='date'>{plato}</span>
                 </Card.Meta>
                 <Card.Description>
-                    {stock}
+                    stock {stock} unidades
                 </Card.Description>
                 <ItemCount 
                     stock = {stock}
                     initial = {0}
                 />
-
                 </Card.Content>
-            </Card>             */}
+            </Card>     
+            
         </div>
     )
 }
 
-export default ItemListContainer
+export default Item

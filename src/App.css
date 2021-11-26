@@ -39,3 +39,6 @@
 .userCss{
   display: flex;
 }
+.itemsList{
+  display: flex;
+}
