@@ -20,7 +20,7 @@ function ItemCount({stock, initial}){
 
     const onAdd = () => {
         const message = `Agregaste ${ qty } producto`
-        console.log(stock)
+        // console.log(stock)
         if(stock !== 0) {
             (qty === 1) ? alert(message) : alert(message + `s`)
         }

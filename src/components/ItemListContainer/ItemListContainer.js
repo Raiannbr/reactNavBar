@@ -3,6 +3,7 @@ import React from 'react'
 // import ItemCount from '../ItemCount/ItemCount'
 
 import ItemList from '../ItemList/ItemList'
+import { useState, useEffect } from 'react'
 
 // let item = {nombre : "Hamburguesa", plato:"congelado", stock:2}
 
@@ -11,12 +12,25 @@ function ItemListContainer(
     ) {
 
 
+
+    const [items, setItems] = useState([])
+
+    useEffect(() => {
+        setTimeout(()=> {
+        fetch("./json/Data.json")
+        .then(response => response.json())
+        .then(respJSON => {console.log(respJSON); setItems(respJSON)})
+        .catch(error => console.log('Error: ', error))
+    
+    },2000)
+    }, [])
+
     
     return (
         <div className="Container">
 
             <ItemList
-                
+                items = {items}
             />
 
 
