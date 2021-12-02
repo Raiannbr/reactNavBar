@@ -42,3 +42,9 @@
 .itemsList{
   display: flex;
 }
+.containerItemCount{
+  width: 100%;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1rf); */
+  gap: 40px;
+}

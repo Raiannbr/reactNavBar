@@ -5,52 +5,34 @@ import React from 'react'
 import ItemList from '../ItemList/ItemList'
 import { useState, useEffect } from 'react'
 
-// let item = {nombre : "Hamburguesa", plato:"congelado", stock:2}
 
-function ItemListContainer(
-    // {nombre, plato, stock, img}
-    ) {
-
-
+function ItemListContainer() {
 
     const [items, setItems] = useState([])
+    const [loading, setLoading] = useState(true)
+
 
     useEffect(() => {
+        setLoading(true)
         setTimeout(()=> {
         fetch("./json/Data.json")
         .then(response => response.json())
-        .then(respJSON => {console.log(respJSON); setItems(respJSON)})
+        .then(respJSON => {console.log(respJSON); setItems(respJSON); setLoading(false)})
         .catch(error => console.log('Error: ', error))
     
     },2000)
     }, [])
 
-    
+
     return (
         <div className="Container">
-
-            <ItemList
+            {
+                loading ? <h4>Cargando lista de productos</h4>
+                :
+                <ItemList
                 items = {items}
             />
-
-
-            {/* <Card>
-                <Card.Content>
-                <Card.Header>{nombre}</Card.Header>
-                <Image src={img} wrapped ui={false} width='250px' />
-                <Card.Meta>
-                    <span className='date'>{plato}</span>
-                </Card.Meta>
-                <Card.Description>
-                    {stock}
-                </Card.Description>
-                <ItemCount 
-                    stock = {stock}
-                    initial = {0}
-                />
-
-                </Card.Content>
-            </Card>             */}
+            }
         </div>
     )
 }

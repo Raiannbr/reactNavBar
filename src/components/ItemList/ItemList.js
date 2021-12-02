@@ -40,11 +40,8 @@ const ItemList = ({items}) => {
     let products = items.map( (items)=> 
                 <div key={items.id} >
                     <Item
-                       id = {items.id}
-                       img = {items.img}
-                       nombre = {items.nombre}
-                       stock = {items.stock}
-                       plato = {items.plato}
+                        items = {items}
+                    
                     />
                 </div>
     )

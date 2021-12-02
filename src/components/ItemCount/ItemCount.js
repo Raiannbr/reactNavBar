@@ -27,7 +27,7 @@ function ItemCount({stock, initial}){
     }
 
     return(
-        <div className= 'containerItemCount'>
+        <div className= '' >
             <div className= 'itemCount mt-2 '>
             <button className='btn btn-danger' onClick={ onDecrease } >-</button>{' '}
             <div className='boxQuantity'>{ qty }</div>

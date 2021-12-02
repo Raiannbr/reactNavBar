@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import Header from './components/Header/Header';
 // import User from './components/User/User';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 
 function App() {
   return (
@@ -20,15 +21,14 @@ function App() {
         <ItemListContainer
           
         />
-      {/* <ItemListContainer 
-        img ='https://s1.eestatic.com/2020/02/10/cocinillas/recetas/vegetarianas/recetas_veganas-hamburguesas-vegetarianas_466466296_144843568_1706x960.jpg'
-        nombre = 'Hamburguesa'
-        plato = 'Congelado'
-        stock = '5'
-      /> */}
       </div>
-
-
+      <div className="row row-cols-sm-1" >
+        <div className="col d-flex">
+          <ItemDetailContainer
+      
+          />
+        </div>
+      </div>
     </div>
   );
 }

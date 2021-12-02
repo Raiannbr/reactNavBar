@@ -1,14 +1,10 @@
 import React from 'react'
-
-import { Card, Image,Button } from 'semantic-ui-react'
-
-
-//componente contador
-// import ItemCount from '../ItemCount/ItemCount'
+import { Card, Image } from 'semantic-ui-react'
+import ItemCount from '../ItemCount/ItemCount'
 
 
 
-function Item({items}) {
+const ItemDetail = ({items}) => {
     return (
         <div >
             <Card>
@@ -21,7 +17,10 @@ function Item({items}) {
                 <Card.Description>
                     stock {items.stock} unidades
                 </Card.Description>
-                <button className='btn btn-success'>Ver detalle</button>
+                <ItemCount 
+                    stock = {items.stock}
+                    initial = {0}
+                />
                 </Card.Content>
             </Card>     
             
@@ -29,4 +28,4 @@ function Item({items}) {
     )
 }
 
-export default Item
+export default ItemDetail
