@@ -4,31 +4,47 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
 import Header from './components/Header/Header';
 // import User from './components/User/User';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+// import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Home  from './View/Home';
+import Contact from './View/Contact';
+import Category from './View/Category';
+
+
 
 function App() {
   return (
     <div className="App">
-
-      <NavBar/>
-      
-      <Header title="La Alianza Reverde" 
+      <Router>
+          <NavBar/>
+          <Header title="La Alianza Reverde" 
                 subtitle="Comida Vegana"
                 color='green' />
+            <Routes>
+              <Route path = '/' element={<Home/>} ></Route>
+              <Route path = '/Category/:id' element={<Category/>} ></Route>
+              <Route path = '/Item/' element={<ItemDetailContainer/>} ></Route>
+              <Route path = '/Contacto/' element={<Contact/>} ></Route>
+            </Routes> 
+      </Router>
       
-      <div className="ItemListContainer" >
+
+      {/* <div className="ItemListContainer" >
         <ItemListContainer
           
         />
-      </div>
-      <div className="row row-cols-sm-1" >
+      </div> */}
+      {/* <div className="row row-cols-sm-1" >
         <div className="col d-flex">
           <ItemDetailContainer
       
           />
         </div>
-      </div>
+      </div> */}
+      
     </div>
   );
 }

@@ -1,3 +1,60 @@
 .CartW {
     background-color: darkgray;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    color: blue;
+    /* width: 100%;
+    height: 100%; */
+    background-color: rgba(43, 226, 43, 0.315);
+    
+}
+
+.navBar{
+    width: 98%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 130px;
+    cursor: pointer;
+}
+
+.navBar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.aL{
+    text-decoration: none;
+    color: black;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+.navBar ul li::before{
+    content: "";
+    height: 3px;
+    width: 35%;
+    background: rgb(45, 53, 4);
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s ease-out;
+}
+
+.navBar ul li:hover::before {
+    width: 100%;
+
+}

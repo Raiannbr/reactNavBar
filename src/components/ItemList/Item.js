@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Card, Image,Button } from 'semantic-ui-react'
+import { Card, Image } from 'semantic-ui-react'
 
 
 //componente contador
