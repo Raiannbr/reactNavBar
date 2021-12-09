@@ -13,9 +13,13 @@ import Home  from './View/Home';
 import Contact from './View/Contact';
 import Category from './View/Category';
 
+//ej para borrar de metodos de rending
+import Metodos from './components/Context/Metodos';
+
 
 
 function App() {
+
   return (
     <div className="App">
       <Router>
@@ -25,9 +29,11 @@ function App() {
                 color='green' />
             <Routes>
               <Route path = '/' element={<Home/>} ></Route>
-              <Route path = '/Category/:id' element={<Category/>} ></Route>
+              <Route path = '/plato/:plato/' element={<Category/>} ></Route>
               <Route path = '/Item/' element={<ItemDetailContainer/>} ></Route>
               <Route path = '/Contacto/' element={<Contact/>} ></Route>
+              <Route path = '/Metodo/' element={<Metodos/>} ></Route>
+
             </Routes> 
       </Router>
       

@@ -1,5 +1,8 @@
 .CartW {
-    background-color: darkgray;
+    background-color: rgb(105, 192, 79);
+    width: 50px;
+    margin-left: 5px;
+    /* margin-right: 1; */
 }
 
 *{

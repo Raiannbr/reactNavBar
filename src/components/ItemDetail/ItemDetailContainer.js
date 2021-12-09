@@ -2,13 +2,13 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import ItemDetail from './ItemDetail'
 
+import { Spinner } from 'reactstrap'
+
 
 const ItemDetailContainer = () => {
 
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
-
-
 
     useEffect(() => {
         setLoading(true)
@@ -21,13 +21,14 @@ const ItemDetailContainer = () => {
     },3500)
     }, [])
 
-    
-
-
     return (
         <div>
             {
-                loading ? <h4>Cargando detalle</h4>
+                loading ? 
+                <Spinner color="secondary"
+                type="grow">
+                Loading...
+                </Spinner>
                 :
                 <ItemDetail
                     items = {items}

@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -47,4 +52,29 @@
   display: grid;
   /* grid-template-columns: repeat(3, 1rf); */
   gap: 40px;
+}
+
+.ligthCont{
+  border: rgb(20, 1, 1);
+  background-color: rgb(231, 220, 220);
+}
+.darkCont{
+  border: rgb(20, 1, 1);
+  background-color: rgb(128, 128, 128);
+}
+
+
+
+.dark{
+  border: rgb(20, 1, 1);
+  background-color: rgb(128, 128, 128);
+}
+
+.darkBtn{
+  background-color: greenyellow;
+}
+
+.Form-Container{
+  display: flex;
+  align-items: center;
 }

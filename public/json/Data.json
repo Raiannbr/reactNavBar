@@ -10,14 +10,14 @@
     "id":2,
     "img":"https://www.lagloriavegana.com/wp-content/uploads/2016/04/falafelfrito.jpg",
     "nombre":"falafels",
-    "plato":"al plato",
+    "plato":"plato",
     "stock":"3"
  },
 {
     "id":3,
     "img":"https://i.pinimg.com/564x/84/6e/dd/846edd90f5101de6fd2b12929deaf330.jpg",
     "nombre":"milanesa",
-    "plato":"al plato",
+    "plato":"plato",
     "stock":"10"
  }
 ]
