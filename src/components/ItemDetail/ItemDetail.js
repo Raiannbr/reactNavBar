@@ -1,29 +1,42 @@
-import React from 'react'
+import React, {useState } from 'react'
 import { Card, Image } from 'semantic-ui-react'
+import { CartContext } from '../Context/useContext'
 import ItemCount from '../ItemCount/ItemCount'
+import { useContext } from 'react'
 
 
 
-const ItemDetail = ({items}) => {
+const ItemDetail = ({item}) => {
+
+    const [add, setAdd] = useState(false)
+
+    const {addItem} = useContext(CartContext)
     return (
-        <div >
-            <Card>
+        <div className='ItemDetail'>
+            <div className='CardDetail'>
+            <Card >
                 <Card.Content>
-                <Card.Header>{items.nombre}</Card.Header>
-                <Image src={items.img} wrapped ui={false} width='250px' />
+                <Card.Header>{item.tittle}</Card.Header>
+                <Image src={item.img} wrapped ui={false} width='250px' />
                 <Card.Meta>
-                    <span className='date'>{items.plato}</span>
+                    <span className='date'>{item.category}</span>
                 </Card.Meta>
                 <Card.Description>
-                    stock {items.stock} unidades
+                    stock {item.stock} unidades
                 </Card.Description>
-                <ItemCount 
-                    stock = {items.stock}
-                    initial = {0}
-                />
+                {
+                    add ? 
+                    <div>Añadido!</div>
+                    :
+                    <ItemCount 
+                    item = {item}
+                    stock = {item.stock}
+                    initial = {1}
+                    addItem={addItem}
+                />}
                 </Card.Content>
             </Card>     
-            
+            </div>
         </div>
     )
 }

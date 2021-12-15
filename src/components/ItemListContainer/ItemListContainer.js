@@ -4,13 +4,14 @@ import React from 'react'
 
 import ItemList from '../ItemList/ItemList'
 import { useState, useEffect } from 'react'
+// import ItemListLoader from '../ItemList/ItemListLoader'
 
 import {Spinner} from 'reactstrap'
 
 
 function ItemListContainer({categoryId} ) {
 
-    const [items, setItems] = useState([])
+    const [item, setItem] = useState([])
     const [loading, setLoading] = useState(true)
 
 
@@ -19,25 +20,26 @@ function ItemListContainer({categoryId} ) {
         setTimeout(()=> {
         fetch(`./json/Data.json`)
         .then(response => response.json())
-        .then(respJSON => {console.log(respJSON); setItems(respJSON); setLoading(false)})
+        .then(respJSON => {console.log(respJSON); setItem(respJSON); setLoading(false)})
         .catch(error => console.log('Error: ', error))
     
+       
     },2000)
     }, [categoryId])
 
-
     return (
-        <div className="Container">
+        <div className="Container">            
             {
-                loading ? 
+                loading ?
+                // <ItemListLoader/> 
                 <Spinner color="success"
                 type="grow">
                 Loading...
                 </Spinner>
                 :
                 <ItemList
-                items = {items}
-            />
+                item = {item}
+                />
             }
         </div>
     )

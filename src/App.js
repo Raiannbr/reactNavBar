@@ -1,20 +1,27 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import NavBar from './components/NavBar/NavBar';
-import Header from './components/Header/Header';
+import Router from './components/Router/Router';
+import { CartProvider } from './components/Context/useContext';
+
+//fire base
+// import { db } from './Firebase/firebaseConfig';
+
+// import NavBar from './components/NavBar/NavBar';
+// import Header from './components/Header/Header';
 // import User from './components/User/User';
 // import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
+// import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home  from './View/Home';
-import Contact from './View/Contact';
-import Category from './View/Category';
+// import Home  from './View/Home';
+// import Contact from './View/Contact';
+// import Category from './View/Category';
+// import Cart from './View/Cart';
 
 //ej para borrar de metodos de rending
-import Metodos from './components/Context/Metodos';
+// import Metodos from './components/Context/Metodos';
 
 
 
@@ -22,21 +29,11 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-          <NavBar/>
-          <Header title="La Alianza Reverde" 
-                subtitle="Comida Vegana"
-                color='green' />
-            <Routes>
-              <Route path = '/' element={<Home/>} ></Route>
-              <Route path = '/plato/:plato/' element={<Category/>} ></Route>
-              <Route path = '/Item/' element={<ItemDetailContainer/>} ></Route>
-              <Route path = '/Contacto/' element={<Contact/>} ></Route>
-              <Route path = '/Metodo/' element={<Metodos/>} ></Route>
 
-            </Routes> 
-      </Router>
-      
+      <CartProvider>
+        <Router/>
+      </CartProvider>
+         
 
       {/* <div className="ItemListContainer" >
         <ItemListContainer

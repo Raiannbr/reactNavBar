@@ -1,23 +1,26 @@
 [
 {
-    "id":1,
+    "id":"1",
     "img":"https://s1.eestatic.com/2020/02/10/cocinillas/recetas/vegetarianas/recetas_veganas-hamburguesas-vegetarianas_466466296_144843568_1706x960.jpg",
-    "nombre":"hamburguesa",
-    "plato":"sandwich",
-    "stock":"5"
+    "tittle":"hamburguesa",
+    "category":"sandwich",
+    "price": 500,
+    "stock":5
  },
 {
-    "id":2,
+    "id":"2",
     "img":"https://www.lagloriavegana.com/wp-content/uploads/2016/04/falafelfrito.jpg",
-    "nombre":"falafels",
-    "plato":"plato",
-    "stock":"3"
+    "tittle":"falafels",
+    "category":"plato",
+    "price": 500,
+    "stock":3
  },
 {
-    "id":3,
+    "id":"3",
     "img":"https://i.pinimg.com/564x/84/6e/dd/846edd90f5101de6fd2b12929deaf330.jpg",
-    "nombre":"milanesa",
-    "plato":"plato",
-    "stock":"10"
+    "tittle":"milanesa",
+    "category":"plato",
+    "price": 500,
+    "stock":10
  }
 ]

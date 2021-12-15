@@ -1,6 +1,7 @@
 import React from "react"
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
+// import { Icon } from "semantic-ui-react";
 import './NavBar.css';
 
 function NavBar () {
@@ -18,11 +19,11 @@ function NavBar () {
                                     <img src=""></img>
                                 </div> */}
                             <ul>   
-                            <li><NavLink to='/plato/plato' className='aL'>
+                            <li><NavLink to='/category/plato' className='aL'>
                                     Plato
                                 </NavLink></li>
 
-                                <li><NavLink to='/plato/sandwich' className='aL'>
+                                <li><NavLink to='/category/sandwich' className='aL'>
                                     Sandwich
                                 </NavLink></li>
                             </ul>     
@@ -30,11 +31,13 @@ function NavBar () {
 
                             <ul>
                                 <li><NavLink className='aL' to='/' >Inicio</NavLink></li>
-                                <li><NavLink className='aL' to='/Item' >Detalle</NavLink></li>
+                                {/* <li><NavLink className='aL' to='/Item' >Detalle</NavLink></li> */}
                                 <li><NavLink className='aL' to='/Contacto' >Contacto</NavLink></li>
                             </ul>
                             <div className="CartW">        
-                            <CartWidget/>
+                             <CartWidget/>
+
+
                             </div>
                         </div>
                         

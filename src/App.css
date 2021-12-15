@@ -78,3 +78,46 @@
   display: flex;
   align-items: center;
 }
+
+.ItemDetail {
+  width: 100%;
+  text-align: center;
+}
+
+.CardDetail{
+  display: inline-block;
+}
+
+/* .buton{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  background: 141414;
+  color: aliceblue;
+  font-family: "verdana";
+  font-size: 5px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: .03s ease all;
+  border-radius: 1px;
+}
+
+.buton ::after{
+  content: "";
+  width: 100%;
+  height: 300px;
+  background: rgb(85, 161, 78);
+  position: absolute;
+  z-index: 1;
+  top: -300;
+  left: 0;
+  transition: .3s ease-in-out all;
+  border-radius: 0px 0px 300px 300px;
+}
+
+.boton:hover::after{
+  top :0;
+} */
