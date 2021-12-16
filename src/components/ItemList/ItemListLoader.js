@@ -19,6 +19,7 @@ const ItemListLoader = () => {
                                 price:'',
                                 categoryId:''
                             }}   
+                            
                             />
                         </div>
                     ) )

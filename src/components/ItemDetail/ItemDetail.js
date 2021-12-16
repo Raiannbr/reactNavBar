@@ -15,6 +15,7 @@ const ItemDetail = ({item}) => {
         <div className='ItemDetail'>
             <div className='CardDetail'>
             <Card >
+                
                 <Card.Content>
                 <Card.Header>{item.tittle}</Card.Header>
                 <Image src={item.img} wrapped ui={false} width='250px' />

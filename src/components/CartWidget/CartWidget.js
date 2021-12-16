@@ -12,6 +12,7 @@ function CartWidget() {
     items.map((item) => {
         itemsInCart = itemsInCart + item.qty;
     })
+    
 
     return (
 

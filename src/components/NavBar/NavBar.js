@@ -18,6 +18,7 @@ function NavBar () {
                                 {/* <div className="item">
                                     <img src=""></img>
                                 </div> */}
+                                
                             <ul>   
                             <li><NavLink to='/category/plato' className='aL'>
                                     Plato

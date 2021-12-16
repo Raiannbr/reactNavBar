@@ -17,6 +17,7 @@ function ItemCount({item, stock, initial, addItem}){
 
     const onDecrease = () => {
         const newValue = qty-1
+        
         if(initial <= newValue){
             setQty(newValue)
         }

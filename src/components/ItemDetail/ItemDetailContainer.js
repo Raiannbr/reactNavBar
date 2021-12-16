@@ -16,6 +16,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         setLoading(true)
         setTimeout(()=> {
+            
         fetch("/json/Data.json")
         .then(response => response.json())
         .then(respJSON => {console.log(respJSON); setItem(respJSON.filter(x =>x.id === params.id)); setLoading(false)})

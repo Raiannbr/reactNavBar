@@ -11,6 +11,7 @@
 //   storageBucket: "reverde-c1be8.appspot.com",
 //   messagingSenderId: "908966732823",
 //   appId: "1:908966732823:web:9510ccc354509c8bb4a852",
+
 //   measurementId: "${config.measurementId}"
 // };
 

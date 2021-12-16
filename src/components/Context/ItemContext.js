@@ -12,6 +12,7 @@ const ItemsProd = [
 
 //2 Crear el componenete provider (ItemProvider)
 export const ItemsProvider = () => {
+    
     const [items, setItems] = useState(ItemsProd);
 
     //3 retornamos nuestro context con un .provider

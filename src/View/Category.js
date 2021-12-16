@@ -9,6 +9,7 @@ const Category = () => {
 
     const params = useParams();
 
+    
     console.log(params.id)
     return (
         <div>

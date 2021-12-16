@@ -16,6 +16,7 @@ function ItemListContainer({categoryId} ) {
 
 
     useEffect(() => {
+        
         setLoading(true)
         setTimeout(()=> {
         fetch(`./json/Data.json`)

@@ -15,6 +15,7 @@ import { CartProvider } from './components/Context/useContext';
 
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+
 // import Home  from './View/Home';
 // import Contact from './View/Contact';
 // import Category from './View/Category';
