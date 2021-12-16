@@ -9,8 +9,19 @@ export const Home = () => {
                 <ItemListContainer
                 
                 />
+                
             </div>
         </div>
+        // <div>
+        //     <div className="ItemListContainer" >
+        //         <br /><br /><br />
+        //         <h2 style={{textAlign: "left"}}>Platos</h2>
+        //         <ItemListContainer categoryId="plato" />
+        //         <br /><br /><br />
+        //         <h2 style={{textAlign: "left"}}>Sandwiches</h2>
+        //         <ItemListContainer categoryId="sandwich" />
+        //     </div>
+        // </div>
     )
 }
 export default Home

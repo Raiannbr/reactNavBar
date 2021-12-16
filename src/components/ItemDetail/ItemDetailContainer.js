@@ -3,23 +3,28 @@ import { useState, useEffect } from 'react'
 import ItemDetail from './ItemDetail'
 
 import { Spinner } from 'reactstrap'
+import { useParams } from 'react-router-dom'
 
 
 const ItemDetailContainer = () => {
 
-    const [items, setItems] = useState([])
+    const [item, setItem] = useState([])
     const [loading, setLoading] = useState(true)
+
+    const params = useParams()
 
     useEffect(() => {
         setLoading(true)
         setTimeout(()=> {
-        fetch("./json/Data.json")
+            
+        fetch("/json/Data.json")
         .then(response => response.json())
-        .then(respJSON => {console.log(respJSON[0]); setItems(respJSON[0]); setLoading(false)})
+        .then(respJSON => {console.log(respJSON); setItem(respJSON.filter(x =>x.id === params.id)); setLoading(false)})
         .catch(error => console.log('Error: ', error))
-    
-    },3500)
-    }, [])
+        
+
+    },2500)
+    }, [params.id])
 
     return (
         <div>
@@ -31,7 +36,7 @@ const ItemDetailContainer = () => {
                 </Spinner>
                 :
                 <ItemDetail
-                    items = {items}
+                    item = {item[0]}
                 />
             }
         </div>
