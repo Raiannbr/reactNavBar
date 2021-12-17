@@ -21,9 +21,13 @@ const ItemDetail = ({item}) => {
                 <Image src={item.img} wrapped ui={false} width='250px' />
                 <Card.Meta>
                     <span className='date'>{item.category}</span>
+                    <h3> {item.detail}</h3>
                 </Card.Meta>
                 <Card.Description>
                     stock {item.stock} unidades
+                </Card.Description>
+                <Card.Description>
+                    <h4>precio $ {item.price}</h4> 
                 </Card.Description>
                 {
                     add ? 

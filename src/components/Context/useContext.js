@@ -14,24 +14,28 @@ export const CartProvider = ({children}) => {
         return found;
     }
 
-
-    
-    //https://youtu.be/2NUT0eFVn04?t=901
-
     const addItem = (item, qty)=> {
         isInCart(item.id) 
         ? setItems( items.map((itemCart)=>{
             if( itemCart.id === item.id){
-                itemCart.qty += item.qty
+                itemCart.qty += qty
             }
+            return itemCart
         }))
         :
         setItems([ ...items, { id: item.id, name: item.tittle, price:item.price, qty: qty }])
         console.log(items);
     }
 
+    const removeItem = (id) => {
+        setItems(items.filter(item => item.id !== id))
+    }
+
+    const clearCart = ()=>{
+        setItems([])
+    }
     return (
-        <CartContext.Provider value={{ items, addItem }}>
+        <CartContext.Provider value={{ items, addItem, removeItem, clearCart }}>
             {children}
         </CartContext.Provider>
     )
