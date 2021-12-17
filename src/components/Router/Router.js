@@ -17,6 +17,8 @@ import Home  from '../../View/Home';
 import Contact from '../../View/Contact';
 import Category from '../../View/Category';
 import Cart from '../../View/Cart';
+import CheckOut from '../../View/CheckOut';
+import CheckFinal from '../../View/CheckFinal';
 
 
 const Router = () => {
@@ -35,6 +37,9 @@ const Router = () => {
                         <Route path = {'/Cart'} element={<Cart/>} ></Route>
                         <Route path = {'/item/:id'} element={<ItemDetailContainer/>} ></Route>
                         <Route path = '/Contacto/' element={<Contact/>} ></Route>
+                        <Route path = '/Ckeckout/' element={<CheckOut/>} ></Route>
+                        <Route path = '/Confirmado/' element={<CheckFinal/>} ></Route>
+
                         {/* <Route path = '/Metodo/' element={<Metodos/>} ></Route> */}
                         </Routes> 
                 </BrowserRouter>
