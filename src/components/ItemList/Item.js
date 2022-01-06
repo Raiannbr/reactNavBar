@@ -11,12 +11,13 @@ import { Card, Image, Segment, Button } from 'semantic-ui-react'
 
 function Item({item}) {
     return (
-        <div >
+        <div className='product'>
+            
             <Card>
                 <Card.Content>
                 <Card.Header>{item.tittle}</Card.Header>
                 
-                <Image src={item.img} wrapped ui={false} width='250px' />
+                <Image src={item.img} wrapped ui={false} width='150px' height='150px' />
                 <Card.Meta>
                     <span className='date'>{item.category}</span>
                 </Card.Meta>

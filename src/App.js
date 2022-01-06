@@ -4,6 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Router from './components/Router/Router';
 import { CartProvider } from './components/Context/useContext';
 
+//Firebase
+// import { db } from './Firebase/firebaseConfig';
+
+//hasta acá llegamos con la instalación de firebase 
+//min 50 https://drive.google.com/file/d/1WWQLIFwV1Rs5s_ZwgTGHpZPnhsovkcra/preview
+
 //fire base
 // import { db } from './Firebase/firebaseConfig';
 
@@ -25,7 +31,7 @@ import { CartProvider } from './components/Context/useContext';
 // import Metodos from './components/Context/Metodos';
 
 //ej para borrar de metodos de rending
-import Metodos from './components/Context/Metodos';
+// import Metodos from './components/Context/Metodos';
 
 
 

@@ -47,6 +47,7 @@
   display: flex;
 }
 .itemsList{
+  /* grid-column: inherit; */
   display: flex;
 }
 .containerItemCount{
@@ -209,4 +210,13 @@
 
 .buttonSend:hover {
   background: #105718;
+}
+
+.itemsContainerList{
+  grid-column: auto;
+  margin: 5px 10px;
+}
+.product{
+  margin: 5px ;
+
 }

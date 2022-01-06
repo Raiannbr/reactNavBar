@@ -7,15 +7,16 @@ import { useContext } from 'react'
 
 
 const ItemDetail = ({item}) => {
+    console.log(item);
+    
+
 
     const [add, setAdd] = useState(false)
-
     const {addItem} = useContext(CartContext)
     return (
         <div className='ItemDetail'>
             <div className='CardDetail'>
             <Card >
-                
                 <Card.Content>
                 <Card.Header>{item.tittle}</Card.Header>
                 <Image src={item.img} wrapped ui={false} width='250px' />

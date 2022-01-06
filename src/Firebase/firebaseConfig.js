@@ -1,22 +1,20 @@
-// Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// import {getFirestore} from './firebase/firestore'
+import { initializeApp } from "firebase/app";
 
-// // Your web app's Firebase configuration
-// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDcPduoKMXx1MJtTlMS8cYyI-RvTk4n2bQ",
-//   authDomain: "reverde-c1be8.firebaseapp.com",
-//   projectId: "reverde-c1be8",
-//   storageBucket: "reverde-c1be8.appspot.com",
-//   messagingSenderId: "908966732823",
-//   appId: "1:908966732823:web:9510ccc354509c8bb4a852",
+//import gerFireStore para utilizar la database creada en firebase
+import {getFirestore} from 'firebase/firestore'
 
-//   measurementId: "${config.measurementId}"
-// };
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBoD6rAVRwhqvnvFoH_C-UhU3cAv6IdELM",
+  authDomain: "alianza-f456b.firebaseapp.com",
+  projectId: "alianza-f456b",
+  storageBucket: "alianza-f456b.appspot.com",
+  messagingSenderId: "131324116701",
+  appId: "1:131324116701:web:629f49c4669a15310e6534"
+};
 
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-// export const db = getFirestore(app)
-
+//variable para igualar el getfirestore, y le pasamos el app que tiene el config
+export const db = getFirestore(app)

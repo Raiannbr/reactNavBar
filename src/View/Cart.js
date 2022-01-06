@@ -1,7 +1,7 @@
 import React  from 'react'
 import { CartContext } from '../components/Context/useContext'
 import { useContext } from 'react'
-import { Segment, Card, Image, Button } from 'semantic-ui-react'
+import { Card, Button } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 

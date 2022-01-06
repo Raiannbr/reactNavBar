@@ -31,6 +31,7 @@ const Router = () => {
                     <Header title="La Alianza Reverde" 
                             subtitle="Comida Vegana"
                             color='green' />
+                        <br/>
                         <Routes>
                         <Route path = '/' element={<Home/>} ></Route>
                         <Route path = {'/category/:categoryId/'} element={<Category/>} ></Route>

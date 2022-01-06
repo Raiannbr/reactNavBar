@@ -1,6 +1,7 @@
 import React from 'react'
 import Item from "./Item"
 // import { useEffect } from 'react';
+import { Grid } from 'semantic-ui-react'
 
 const ItemList = ({item}) => {
 
@@ -13,8 +14,15 @@ const ItemList = ({item}) => {
                 </div>
     )
     return (
-        <div className= "itemsList">
-            { products }
+        <div >
+            <Grid columns={3} divided>
+                
+
+                     { products }
+
+                
+            </Grid>
+
         </div>
     )
     

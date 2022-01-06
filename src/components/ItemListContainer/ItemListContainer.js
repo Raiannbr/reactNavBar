@@ -8,6 +8,10 @@ import { useState, useEffect } from 'react'
 
 import {Spinner} from 'reactstrap'
 
+import {db} from '../../Firebase/firebaseConfig'
+import {collection, query, getDocs} from 'firebase/firestore'
+
+
 
 // function ItemListContainer({categoryId} ) {
 
@@ -17,40 +21,65 @@ function ItemListContainer({categoryId} ) {
     const [loading, setLoading] = useState(true)
 
 
-    useEffect(() => {
+    // useEffect(() => {
         
-        setLoading(true)
-        setTimeout(()=> {
-        fetch(`./json/Data.json`)
-        .then(response => response.json())
-        .then(respJSON => {console.log(respJSON); setItem(respJSON); setLoading(false)})
-        .catch(error => console.log('Error: ', error))
+    //     setLoading(true)
+    //     setTimeout(()=> {
+    //     // fetch(`./json/Data.json`)
+    //     // .then(response => response.json())
+    //     // .then(respJSON => {console.log(respJSON); setItem(respJSON); setLoading(false)})
+    //     // .catch(error => console.log('Error: ', error))
     
        
-    },2000)
-    }, [categoryId])
-// <<<<<<< HEAD
+    // },2000)
+    // }, [categoryId])
 
-// =======
-// >>>>>>> develob
+
+
+
+    // const [itemF, setItemF] = useState([])
+    // console.log( 'item',itemF);
+
+
+    useEffect(()=>{
+        setLoading(true)
+
+        const getProducts = async ()=> {
+            //asincronia de fire base, para sacar los productos
+            const q = query ( collection (db, "items"))
+        
+            //array de productos 
+            const docs = []
+            const querySnapshot = await getDocs(q)
+            // console.log( querySnapshot );
+            setLoading(false)
+
+            querySnapshot.forEach((doc)=>{
+                docs.push({...doc.data(), id: doc.id});
+
+            } );
+
+            setItem(docs);
+        };
+        getProducts();
+    
+    },[])
 
     return (
         <div className="Container">            
             {
-// <<<<<<< HEAD
-                // loading ? 
-// =======
                 loading ?
                 // <ItemListLoader/> 
-// >>>>>>> develob
                 <Spinner color="success"
                 type="grow">
                 Loading...
                 </Spinner>
                 :
-                <ItemList
-                item = {item}
-                />
+                <div className='itemsContainerList'>
+                    <ItemList
+                    item = {item}
+                    />
+                </div>
             }
         </div>
     )

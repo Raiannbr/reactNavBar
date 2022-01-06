@@ -50,7 +50,7 @@ function ItemCount({item, stock, initial, addItem}){
                 <br/>
                  <Link to="/Cart" >   
                  <Button inverted color='green'>
-                    Finalizar compra
+                    ir a pagar
                 </Button></Link> 
 
 
