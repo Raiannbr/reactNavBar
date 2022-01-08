@@ -10,9 +10,10 @@ import { Card, Image, Segment, Button } from 'semantic-ui-react'
 
 
 function Item({item}) {
+    console.log(item);
     return (
         <div className='product'>
-            
+            <Link to={`/item/${item.id}`}>
             <Card>
                 <Card.Content>
                 <Card.Header>{item.tittle}</Card.Header>
@@ -26,13 +27,13 @@ function Item({item}) {
                 </Card.Description>
                 <Segment>
                 <Link to={`/item/${item.id}`}>
-                <Button inverted color='green'>Ver detalle</Button>
-                {/* <button className='btn btn-success'>Ver detalle</button> */}
+                    <Button inverted color='green'>Ver detalle</Button>
+                    {/* <button className='btn btn-success'>Ver detalle</button> */}
                 </Link>
                 </Segment>
                 </Card.Content>
             </Card>     
-            
+            </Link>
         </div>
     )
 }

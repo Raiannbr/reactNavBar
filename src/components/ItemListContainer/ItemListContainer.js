@@ -10,16 +10,12 @@ import {Spinner} from 'reactstrap'
 
 import {db} from '../../Firebase/firebaseConfig'
 import {collection, query, getDocs} from 'firebase/firestore'
-
-
-
 // function ItemListContainer({categoryId} ) {
 
 function ItemListContainer({categoryId} ) {
 
     const [item, setItem] = useState([])
     const [loading, setLoading] = useState(true)
-
 
     // useEffect(() => {
         
@@ -30,17 +26,8 @@ function ItemListContainer({categoryId} ) {
     //     // .then(respJSON => {console.log(respJSON); setItem(respJSON); setLoading(false)})
     //     // .catch(error => console.log('Error: ', error))
     
-       
     // },2000)
     // }, [categoryId])
-
-
-
-
-    // const [itemF, setItemF] = useState([])
-    // console.log( 'item',itemF);
-
-
     useEffect(()=>{
         setLoading(true)
 
@@ -64,6 +51,7 @@ function ItemListContainer({categoryId} ) {
         getProducts();
     
     },[])
+    console.log('items',item);
 
     return (
         <div className="Container">            
@@ -79,6 +67,7 @@ function ItemListContainer({categoryId} ) {
                     <ItemList
                     item = {item}
                     />
+
                 </div>
             }
         </div>

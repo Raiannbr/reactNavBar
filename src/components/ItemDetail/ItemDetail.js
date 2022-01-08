@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+// import React, {useState } from 'react'
 import { Card, Image } from 'semantic-ui-react'
 import { CartContext } from '../Context/useContext'
 import ItemCount from '../ItemCount/ItemCount'
@@ -6,12 +6,11 @@ import { useContext } from 'react'
 
 
 
-const ItemDetail = ({item}) => {
-    console.log(item);
+const ItemDetail = ({data}) => {
     
+    const item = data
 
-
-    const [add, setAdd] = useState(false)
+    // const [add, setAdd] = useState(false)
     const {addItem} = useContext(CartContext)
     return (
         <div className='ItemDetail'>
@@ -31,9 +30,6 @@ const ItemDetail = ({item}) => {
                     <h4>precio $ {item.price}</h4> 
                 </Card.Description>
                 {
-                    add ? 
-                    <div>Añadido!</div>
-                    :
                     <ItemCount 
                     item = {item}
                     stock = {item.stock}

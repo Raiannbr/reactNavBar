@@ -40,20 +40,8 @@ const Router = () => {
                         <Route path = '/Contacto/' element={<Contact/>} ></Route>
                         <Route path = '/Ckeckout/' element={<CheckOut/>} ></Route>
                         <Route path = '/Confirmado/' element={<CheckFinal/>} ></Route>
-
-                        {/* <Route path = '/Metodo/' element={<Metodos/>} ></Route> */}
                         </Routes> 
                 </BrowserRouter>
-                {/* <div className="ItemListContainer" >
-                    <ItemListContainer
-                    />
-                </div> */}
-                {/* <div className="row row-cols-sm-1" >
-                    <div className="col d-flex">
-                    <ItemDetailContainer
-                    />
-                    </div>
-                </div> */}
             </div>
         </div>
     )
