@@ -15,7 +15,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home  from '../../View/Home';
 import Contact from '../../View/Contact';
-import Category from '../../View/Category';
+import Platos from '../../View/Category/Platos';
+import Sandwich from '../../View/Category/Sandwich';
+import Postres from '../../View/Category/Postres';
 import Cart from '../../View/Cart';
 import CheckOut from '../../View/CheckOut';
 import CheckFinal from '../../View/CheckFinal';
@@ -34,7 +36,9 @@ const Router = () => {
                         <br/>
                         <Routes>
                         <Route path = '/' element={<Home/>} ></Route>
-                        <Route path = {'/category/:categoryId/'} element={<Category/>} ></Route>
+                        <Route path = {'/category/plato/'} element={<Platos/>} ></Route>
+                        <Route path = {'/category/sandwich/'} element={<Sandwich/>} ></Route>
+                        <Route path = {'/category/postres/'} element={<Postres/>} ></Route>
                         <Route path = {'/Cart'} element={<Cart/>} ></Route>
                         <Route path = {'/item/:id'} element={<ItemDetailContainer/>} ></Route>
                         <Route path = '/Contacto/' element={<Contact/>} ></Route>

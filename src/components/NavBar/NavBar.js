@@ -13,28 +13,31 @@ function NavBar () {
 
                             <h2 className="logo"><a href='https://www.instagram.com/laalianzareverde'>Instagram</a></h2>
                         
-                            <div>
-
-                                {/* <div className="item">
-                                    <img src=""></img>
-                                </div> */}
-                                
-                            <ul>   
-                            <li><NavLink to='/category/plato' className='aL'>
-                                    Plato
-                                </NavLink></li>
-
-                                <li><NavLink to='/category/sandwich' className='aL'>
-                                    Sandwich
-                                </NavLink></li>
-                            </ul>     
-                            </div>
 
                             <ul>
                                 <li><NavLink className='aL' to='/' >Inicio</NavLink></li>
                                 {/* <li><NavLink className='aL' to='/Item' >Detalle</NavLink></li> */}
                                 <li><NavLink className='aL' to='/Contacto' >Contacto</NavLink></li>
                             </ul>
+                            <div>
+
+                                {/* <div className="item">
+                                    <img src=""></img>
+                                </div> */}
+                                
+                                <ul>   
+                                <li><NavLink to='/category/plato' className='aL'>
+                                        Plato
+                                    </NavLink></li>
+
+                                    <li><NavLink to='/category/sandwich' className='aL'>
+                                        Sandwich
+                                    </NavLink></li>
+                                    <li><NavLink to='/category/postres' className='aL'>
+                                        Postres
+                                    </NavLink></li>
+                                </ul>     
+                            </div>
                             <div className="CartW">        
                              <CartWidget/>
 
