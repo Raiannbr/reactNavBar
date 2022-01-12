@@ -41,7 +41,7 @@ function ItemCount({item, stock, initial, addItem}){
                 </Segment>
 
                 <Button animated='vertical' onClick={()=> addItem(item, qty) }>
-                <Button.Content hidden>Carrito</Button.Content>
+                <Button.Content hidden onClick= {()=> alert("Se agrego al carrito")} >Carrito</Button.Content>
                 <Button.Content visible>
                     <Icon name='shop' />
                 </Button.Content>
