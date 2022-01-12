@@ -37,8 +37,10 @@ const Cart = () => {
                 
 
                 <div> 
-                <Link to={"/Ckeckout"}> <Button inverted color='green'>Finalizar Compra</Button></Link>
-                <Button inverted color='red' onClick={()=> clearCart()}>Limpiar carrito</Button>
+                    
+                    <Link to={"/Ckeckout"}> <Button inverted color='green'>Finalizar Compra</Button></Link>
+                    <Button inverted color='red' onClick={()=> clearCart()}>Limpiar carrito</Button>
+
                 </div>
 
         </div>

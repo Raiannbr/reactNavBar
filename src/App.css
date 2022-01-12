@@ -226,3 +226,40 @@
   border: ccc;
   border-radius: 5px;
 }
+
+.itemsInCart{
+  width: 25%;
+  height: 25px;
+  text-align: left;
+  text-decoration-color: #282c34;
+  border-radius: 100%;
+  cursor: default;
+  background-color: rgba(238, 218, 218, 0.103);
+  padding-left: 2px;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+.CartW{
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 50px;
+  max-width: 110px;
+  padding-right: 05px;
+  background-color: #0df133c2;
+  border-radius: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

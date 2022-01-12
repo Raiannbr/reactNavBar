@@ -38,7 +38,7 @@ function NavBar () {
                                     </NavLink></li>
                                 </ul>     
                             </div>
-                            <div className="CartW">        
+                            <div >        
                              <CartWidget/>
 
 
